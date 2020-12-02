@@ -4,3 +4,9 @@ c:\users\desktop-win-bac\documents\visual studio 2015\Projects\MyStack\MyStack\b
 c:\users\desktop-win-bac\documents\visual studio 2015\Projects\MyStack\MyStack\obj\Debug\MyStack.csprojResolveAssemblyReference.cache
 c:\users\desktop-win-bac\documents\visual studio 2015\Projects\MyStack\MyStack\obj\Debug\MyStack.exe
 c:\users\desktop-win-bac\documents\visual studio 2015\Projects\MyStack\MyStack\obj\Debug\MyStack.pdb
+D:\Git\Stack\MyStack\bin\Debug\MyStack.exe.config
+D:\Git\Stack\MyStack\obj\Debug\MyStack.exe
+D:\Git\Stack\MyStack\obj\Debug\MyStack.pdb
+D:\Git\Stack\MyStack\bin\Debug\MyStack.exe
+D:\Git\Stack\MyStack\bin\Debug\MyStack.pdb
+D:\Git\Stack\MyStack\obj\Debug\MyStack.csprojResolveAssemblyReference.cache

@@ -9,45 +9,65 @@ namespace MyStack
     class MyStack<T>
     {
         private int topIndex { get; set; } = -1;
-        private List<T> lst { get; set; } = new List<T>();        
-        private T item { get; set; } = default(T);
-        public MyStack(int indexStack, List<T> lst)
+        public int lengthStack { get; set; } = 0;
+        private List<T> lst { get; set; } = new List<T>();
+        private T valueStack { get; set; } = default(T);
+        public MyStack(int indexStack,int lengthStack, List<T> lst,T valueStack)
         {
             this.topIndex = -1;
             this.lst = new List<T>();
+            this.lengthStack = lengthStack;
+            this.valueStack = valueStack;
         }
         public MyStack()
         {
 
         }
+        public bool IsEmpty()
+        {
+            if (topIndex < 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         public void Push(T valueStack)
         {
-            //lst[topIndex] = valueStack;          
+            if (topIndex >= lengthStack - 1)
+            {
+                Console.WriteLine("Stack is full");
+                Console.ReadKey();
+            }
             lst.Add(valueStack);
             topIndex++;
         }
         public T Pop()
         {
+            if(IsEmpty())
+            {
+                Console.WriteLine("Stack is empty");
+                Console.ReadKey();
+            }
             T item = lst[topIndex];
             lst.RemoveAt(topIndex);
             topIndex--;
             return item;
         }
-
-        public T Get()
-        {
+        public T GetValue()
+        {   
+            if(lengthStack==0)
+            {
+                Console.WriteLine("Stack is empty!");
+            }
             return lst[topIndex];
-        }
-       
-        public bool IsEmpty()
-        {
-            return lst.Count == 0;
-        }
-        public int Count()
-        {
-            return lst.Count();
-        }
+
+        }       
+        
+        
 
     }
 }
