@@ -12,12 +12,14 @@ namespace MyStack
         {
             //create MyStack type string
             MyStack<string> st = new MyStack<string>();
+            Console.WriteLine("-----Enter length stack-----: ");
+            st.lengthStack = int.Parse(Console.ReadLine());
             while(true)
             {
-                Console.WriteLine("Choose a number :");
+                Console.WriteLine("what do you want with stack? :");
                 Console.WriteLine("1: push");
                 Console.WriteLine("2: pop");
-                Console.WriteLine("3: show value");
+                Console.WriteLine("3: Current value");
                 //enter number in 1,2,3
                 int number = int.Parse(Console.ReadLine());
                 if(number==1)
@@ -26,23 +28,26 @@ namespace MyStack
                     //enter value stack
                     string valueStack = Console.ReadLine();
                     //add value 
-                    st.Push(valueStack);
+                    st.Push(valueStack);                  
                 }
                 else if(number==2)
                 {
-                    //Console.WriteLine("you are poped a value out stack :");
-                    //pop value
-                    st.Pop();
                     //show value pop
-                    Console.WriteLine(st.Pop());
+                    
+                    try
+                    {
+                        Console.WriteLine("---You are poped a value out stack--- :"+ st.Pop());                        
+                    }
+                    catch
+                    {
+                        continue;
+                    }
                 }
                 else if(number==3)
-                {       //get value current            
-                        Console.WriteLine(st.GetValue());                        
+                {       //get value current                                                         
+                        Console.WriteLine("Current value ---> " + st.GetValue());                        
                 }
             }
-
-         
         }
     }
 }
